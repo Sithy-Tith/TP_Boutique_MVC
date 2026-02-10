@@ -118,7 +118,7 @@
 <body>
 
     <div class="container-main">
-        <h1>🏢 Liste des fournisseurs</h1>
+        <h1>Liste des fournisseurs</h1>
 
         <div class="btn-add">
             <a href="index.php?type=supplier&action=create" class="btn btn-primary btn-lg">
