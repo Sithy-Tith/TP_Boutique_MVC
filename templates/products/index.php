@@ -8,7 +8,7 @@
     <style>
         body { 
             padding: 20px; 
-            background: linear-gradient(135deg, #000000ff 0%, #ffffffff 100%);
+            background: linear-gradient(135deg, #000000ff 0%, #000000ff 100%);
             min-height: 100vh;
         }
         .btn-primary { 

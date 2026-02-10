@@ -8,7 +8,7 @@
     <style>
         body {
             padding: 20px;
-            background: linear-gradient(135deg, rgba(0, 47, 255, 1) 0%, #000000ff 100%);
+            background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, #000000ff 100%);
             min-height: 100vh;
         }
         .form-container {
@@ -46,7 +46,7 @@
             outline: none;
         }
         .btn-submit {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #000000ff 0%, #000000ff 100%);
             color: white;
             padding: 12px 30px;
             border: none;
