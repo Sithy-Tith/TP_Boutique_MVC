@@ -112,6 +112,42 @@
             box-shadow: 0 6px 20px rgba(108, 117, 125, 0.3);
             color: white;
         }
+
+        .btn-edit, .btn-delete {
+            padding: 6px 12px;
+            font-size: 0.9rem;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-edit {
+            background: #000000ff;
+            color: white;
+        }
+
+        .btn-edit:hover {
+            background: #000000ff;
+            color: white;
+        }
+
+        .btn-delete {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-delete:hover {
+            background: #c82333;
+            color: white;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+        }
     </style>
 </head>
 
@@ -138,6 +174,7 @@
                             <th>👤 Nom</th>
                             <th>📞 Téléphone</th>
                             <th>📧 Email</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -146,6 +183,11 @@
                                 <td class="fw-500"><?= htmlspecialchars($fournisseur['name']) ?></td>
                                 <td><?= htmlspecialchars($fournisseur['phone']) ?></td>
                                 <td><?= htmlspecialchars($fournisseur['email']) ?></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <a href="index.php?type=supplier&action=edit&id=<?= $fournisseur['id'] ?>" class="btn-edit">Modifier</a>
+                                    </div>
+                                </td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

@@ -21,6 +21,10 @@ if ($type === 'supplier') {
             $controller->create();
             break;
 
+        case 'edit':
+            $controller->edit($id);
+            break;
+
         case 'save':
             $controller->save();
             break;

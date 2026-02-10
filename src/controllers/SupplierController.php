@@ -17,21 +17,36 @@ class SupplierController {
     }
 
     public function create() {
-        include __DIR__ . '/../../templates/suppliers/create.php';
+        $supplier = null;
+        include __DIR__ . '/../../templates/suppliers/edit.php';
+    }
+
+    public function edit($id) {
+        $supplier = $this->supplierModel->getById($id);
+        include __DIR__ . '/../../templates/suppliers/edit.php';
     }
 
     public function save() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $id = $_POST['id'] ?? null;
             $name = $_POST['name'] ?? '';
             $phone = $_POST['phone'] ?? '';
             $email = $_POST['email'] ?? '';
 
             if (!empty($name) && !empty($email)) {
-                $this->supplierModel->add([
-                    'name' => $name,
-                    'phone' => $phone,
-                    'email' => $email
-                ]);
+                if ($id) {
+                    $this->supplierModel->update($id, [
+                        'name' => $name,
+                        'phone' => $phone,
+                        'email' => $email
+                    ]);
+                } else {
+                    $this->supplierModel->add([
+                        'name' => $name,
+                        'phone' => $phone,
+                        'email' => $email
+                    ]);
+                }
                 header('Location: index.php?type=supplier');
                 exit();
             }

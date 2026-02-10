@@ -88,9 +88,10 @@
             color: white;
         }
         .btn-back:hover {
+            background: #5a6268 !important;
+            color: white !important;
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-            color: white;
+            box-shadow: 0 8px 20px rgba(108, 117, 125, 0.4);
         }
 
         .btn-add {

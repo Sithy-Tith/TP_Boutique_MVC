@@ -52,4 +52,47 @@ class SupplierModel
             throw new PDOException("Erreur SQL (add) : " . $e->getMessage());
         }
     }
+
+    /**
+     * Récupérer un fournisseur par son ID
+     */
+    public function getById(int $id): ?array
+    {
+        try {
+            $stmt = $this->pdo->prepare("
+                SELECT id, name, phone, email FROM suppliers WHERE id = ?
+            ");
+            $stmt->execute([$id]);
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result ?: null;
+        } catch (PDOException $e) {
+            throw new PDOException("Erreur SQL (getById) : " . $e->getMessage());
+        }
+    }
+
+    /**
+     * Mettre à jour un fournisseur
+     */
+    public function update(int $id, array $data): void
+    {
+        try {
+            $stmt = $this->pdo->prepare("
+                UPDATE suppliers
+                SET name = :name,
+                    phone = :phone,
+                    email = :email
+                WHERE id = :id
+            ");
+
+            $stmt->execute([
+                ':name' => $data['name'],
+                ':phone' => $data['phone'],
+                ':email' => $data['email'],
+                ':id' => $id
+            ]);
+
+        } catch (PDOException $e) {
+            throw new PDOException("Erreur SQL (update) : " . $e->getMessage());
+        }
+    }
 }
