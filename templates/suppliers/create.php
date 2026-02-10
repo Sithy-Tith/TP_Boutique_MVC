@@ -114,7 +114,7 @@
         </div>
 
         <div class="btn-group">
-            <button type="submit" class="btn-submit">✓ Ajouter</button>
+            <button type="submit" class="btn-submit">✓ Enregistrer</button>
             <a href="index.php?type=supplier" class="btn-cancel">✕ Annuler</a>
         </div>
     </form>
