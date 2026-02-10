@@ -1,0 +1,16 @@
+RewriteEngine On
+RewriteBase /src/http/TP_Boutique_MVC/public/
+
+# 1️⃣ Bloquer l'accès aux fichiers sensibles
+<FilesMatch "\.(env|ini|log|sql|json|yml)$">
+Require all denied
+</FilesMatch>
+
+# 2️⃣ Désactiver l'affichage du contenu des dossiers
+Options -Indexes
+
+# 3️⃣ Routing MVC : tout passe par index.phpp
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+
