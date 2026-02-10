@@ -63,7 +63,7 @@
     <?php else: ?>
         <div class="alert alert-info text-center" role="alert">
             <h4 class="alert-heading">Aucun produit</h4>
-            <p>Aucun produit trouvé. <a href="index.php?action=form">Créez en un maintenant</a></p>
+            <p>Aucun produit trouvé.</p>
         </div>
     <?php endif; ?>
 </div>
