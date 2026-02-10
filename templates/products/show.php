@@ -92,7 +92,7 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
             color: white;
         }
-        
+
         .btn-add {
             margin-bottom: 25px;
         }

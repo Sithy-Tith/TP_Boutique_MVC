@@ -151,10 +151,10 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>📝 Produit</th>
-                        <th>🏢 Fournisseur</th>
-                        <th>💰 Prix</th>
-                        <th>📊 Quantité</th>
+                        <th>Produit</th>
+                        <th>Fournisseur</th>
+                        <th>Prix</th>
+                        <th>Quantité</th>
                         <th class="text-center">⚙️ Actions</th>
                     </tr>
                 </thead>
