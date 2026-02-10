@@ -81,6 +81,7 @@ class ProductModel
         $stmt = $this->pdo->prepare("
             UPDATE products
             SET name = :name,
+                description = :description,
                 fk_supplier = :fk_supplier,
                 price = :price,
                 stock = :stock

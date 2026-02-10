@@ -8,8 +8,17 @@
     <style>
         body { 
             padding: 20px; 
-            background: linear-gradient(135deg, #a03939ff 0%, #ffffffff 100%);
+            background: linear-gradient(135deg, #000000ff 0%, #ffffffff 100%);
             min-height: 100vh;
+        }
+        .btn-primary { 
+            background: linear-gradient(135deg, #000000ff 0%, #000000ff 100%);
+            color: white;
+        }
+        .btn-primary:hover { 
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            color: white;
         }
         .container-main { 
             max-width: 1200px; 
@@ -48,7 +57,7 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
         .table th { 
-            color: white; 
+            color: black; 
             font-weight: 600;
             border: none;
             padding: 15px 10px;
@@ -79,30 +88,30 @@
             font-weight: 500;
         }
         .btn-info { 
-            background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
+            background: linear-gradient(135deg, #000000ff 0%, #000000ff 100%);
             color: white;
         }
         .btn-info:hover { 
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 131, 176, 0.4);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
             color: white;
         }
         .btn-warning { 
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #000000ff 0%, #000000ff 100%);
             color: white;
         }
         .btn-warning:hover { 
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(245, 87, 108, 0.4);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
             color: white;
         }
         .btn-danger { 
-            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            background: linear-gradient(135deg, #880000ff 0%, #880000ff 100%);
             color: white;
         }
         .btn-danger:hover { 
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(250, 112, 154, 0.4);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
             color: white;
         }
         .alert { 
@@ -160,13 +169,13 @@
                             </td>
                             <td class="text-center">
                                 <a href="index.php?action=show&id=<?= $produit['id'] ?>" class="btn btn-sm btn-info btn-action">
-                                    👁️ Voir
+                                    Voir
                                 </a>
                                 <a href="index.php?action=form&id=<?= $produit['id'] ?>" class="btn btn-sm btn-warning btn-action">
-                                    ✏️ Modifier
+                                    Modifier
                                 </a>
                                 <a href="index.php?action=delete&id=<?= $produit['id'] ?>" class="btn btn-sm btn-danger btn-action" onclick="return confirm('Confirmer la suppression?')">
-                                    🗑️ Supprimer
+                                    Supprimer
                                 </a>
                             </td>
                         </tr>
@@ -176,7 +185,7 @@
         </div>
     <?php else: ?>
         <div class="alert alert-info text-center" role="alert">
-            <h4 class="alert-heading">📭 Aucun produit</h4>
+            <h4 class="alert-heading">Aucun produit</h4>
             <p class="mb-0">Aucun produit trouvé. <a href="index.php?action=form">Créez en un maintenant</a></p>
         </div>
     <?php endif; ?>

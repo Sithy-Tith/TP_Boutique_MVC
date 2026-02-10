@@ -8,7 +8,7 @@
     <style>
         body {
             padding: 20px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #000000ff 0%, #ffffffff 100%);
             min-height: 100vh;
         }
         .container-main {
@@ -43,7 +43,7 @@
         }
         .detail-label {
             font-weight: 600;
-            color: #667eea;
+            color: #ff0000ff;
             display: block;
             margin-bottom: 5px;
         }
@@ -64,22 +64,23 @@
             margin: 5px;
             border-radius: 8px;
         }
+        
         .btn-modify {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #000000ff 0%, #000000ff 100%);
             color: white;
         }
         .btn-modify:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(245, 87, 108, 0.4);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
             color: white;
         }
         .btn-delete {
-            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            background: linear-gradient(135deg, #ff0000ff 0%, #ff0000ff 100%);
             color: white;
         }
         .btn-delete:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(250, 112, 154, 0.4);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
             color: white;
         }
         .btn-back {
@@ -88,7 +89,7 @@
         }
         .btn-back:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(108, 117, 125, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
             color: white;
         }
         .btn-add {
@@ -155,7 +156,7 @@
 
 <?php if (isset($produit)): ?>
     <!-- Affichage des détails d'un produit -->
-    <h1>📦 Détails du produit</h1>
+    <h1>Détails du produit</h1>
     <div class="detail-card card">
         <div class="card-body">
             <div class="detail-item">
@@ -184,8 +185,8 @@
             </div>
 
             <div class="mt-4 text-center">
-                <a href="index.php?action=form&id=<?= $produit['id'] ?>" class="btn btn-action btn-modify">✏️ Modifier</a>
-                <a href="index.php?action=delete&id=<?= $produit['id'] ?>" class="btn btn-action btn-delete" onclick="return confirm('Confirmer la suppression?')">🗑️ Supprimer</a>
+                <a href="index.php?action=form&id=<?= $produit['id'] ?>" class="btn btn-action btn-modify">Modifier</a>
+                <a href="index.php?action=delete&id=<?= $produit['id'] ?>" class="btn btn-action btn-delete" onclick="return confirm('Confirmer la suppression?')">Supprimer</a>
                 <a href="index.php" class="btn btn-action btn-back">← Retour</a>
             </div>
         </div>
@@ -193,7 +194,7 @@
 
 <?php else: ?>
     <!-- Affichage de la liste des produits -->
-    <h1>📦 Liste des produits</h1>
+    <h1>Liste des produits</h1>
 
     <div class="btn-add text-center">
         <a href="index.php?action=form" class="btn btn-primary btn-lg">
@@ -224,8 +225,8 @@
                             </td>
                             <td class="text-center">
                                 <a href="index.php?action=show&id=<?= $produit['id'] ?>" class="btn btn-sm btn-action btn-view">👁️ Voir</a>
-                                <a href="index.php?action=form&id=<?= $produit['id'] ?>" class="btn btn-sm btn-action btn-modify">✏️ Modifier</a>
-                                <a href="index.php?action=delete&id=<?= $produit['id'] ?>" class="btn btn-sm btn-action btn-delete" onclick="return confirm('Confirmer la suppression?')">🗑️ Supprimer</a>
+                                <a href="index.php?action=form&id=<?= $produit['id'] ?>" class="btn btn-sm btn-action btn-modify">Modifier</a>
+                                <a href="index.php?action=delete&id=<?= $produit['id'] ?>" class="btn btn-sm btn-action btn-delete" onclick="return confirm('Confirmer la suppression?')">Supprimer</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

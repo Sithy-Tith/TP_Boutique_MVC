@@ -8,7 +8,7 @@
     <style>
         body {
             padding: 20px;
-            background: linear-gradient(135deg, #7b3535ff 0%, #f8f9fa 100%);
+            background: linear-gradient(135deg, #000000ff 0%, #f8f9fa 100%);
             min-height: 100vh;
         }
         .container-main {
@@ -48,7 +48,8 @@
             justify-content: center;
         }
         .btn-submit {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            background: linear-gradient(135deg, #000000ff 0%, #000000ff 100%);
             border: none;
             padding: 12px 30px;
             font-weight: 600;
@@ -60,7 +61,7 @@
             color: white;
         }
         .btn-cancel {
-            background: #6c757d;
+            background: #6c757dff;
             border: none;
             padding: 12px 30px;
             font-weight: 600;
@@ -82,7 +83,7 @@
 <div class="container-main">
     <h1><?= $produit ? 'Modifier le produit' : '➕ Ajouter un nouveau produit' ?></h1>
 
-    <form method="POST" action="index.php?action=save">
+    <form method="POST" action="index.php?type=product&action=save">
         <?php if ($produit): ?>
             <input type="hidden" name="id" value="<?= htmlspecialchars($produit['id']) ?>">
         <?php endif; ?>
